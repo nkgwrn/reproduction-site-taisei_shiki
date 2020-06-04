@@ -7,7 +7,7 @@ module.exports = {
     ignored: /node_modules/,
   },
   output: {
-    path: __dirname + "/dist/js",
+    path: __dirname + "/public/js",
     filename: "bundle.js",
   },
 };

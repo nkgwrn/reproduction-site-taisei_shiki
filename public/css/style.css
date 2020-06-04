@@ -202,57 +202,58 @@ select:-moz-focusring {
   text-shadow: 0 0 0 #828c9a;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 html {
-  word-wrap: break-word;
   font-size: 62.5%;
-  margin: 0;
-  padding: 0;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  color: #222;
-  font-size: 100%;
-  font-family: Lato, "游ゴシック", "Yu Gothic", sans-serif;
+  color: #8c720e;
+  font-size: 10px;
+  font-size: 1rem;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
   font-weight: 400;
   -webkit-text-size-adjust: 100%;
-  -ms-overflow-style: none;
-  overflow-x: hidden;
-  -ms-scroll-chaining: none;
-      overscroll-behavior: none;
-  scrollbar-width: none;
+  letter-spacing: 0.01em;
+  line-height: 1.65;
+  border: 2px solid #8c720e;
 }
 
-body::-webkit-scrollbar {
-  /* Chrome, Safari 対応 */
-  display: none;
+@media all and (-ms-high-contrast: none) {
+  body {
+    font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  }
+  main {
+    display: block;
+  }
+}
+
+* {
+  font-weight: normal;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a {
+  color: #8c720e;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.65;
 }
 
 img {
   max-width: 100%;
-}
-
-main {
-  font-size: 1.6rem;
-}
-
-a,
-a:visited,
-a:hover,
-a:active {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
 }
 
 ul,
@@ -351,80 +352,153 @@ li {
   }
 }
 
-.js-start {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  position: fixed;
-  z-index: 999;
-}
-
-.js-anime-value {
-  transform: translateY(-100%);
-  transition: all 2s cubic-bezier(0.6, 0.21, 0.13, 1);
-}
-
-@media only screen and (max-width: 768px) {
-  .js-anime-value {
-    opacity: 0;
-    transform: translateY(-50px);
-    transition: all 1s ease-out;
-  }
-}
-
-.js-anime-value.active {
-  transform: translateY(112px);
-}
-
-@media only screen and (max-width: 768px) {
-  .js-anime-value.active {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.js-scroll {
-  background: #ecf0f1;
-  bottom: 0px;
-  height: 0;
-  left: auto;
-  opacity: 1;
-  margin: 0px;
-  overflow: hidden;
-  position: fixed;
-  padding: 0px;
-  right: 0px;
-  top: 0px;
-  width: 2px;
-  z-index: 10;
-}
-
-.js-scroll-inner {
-  background: #ee3281;
-  bottom: auto;
-  height: 0;
-  left: 0px;
-  margin: 0px;
-  overflow: hidden;
-  padding: 0px;
-  position: absolute;
-  right: auto;
-  top: 0px;
-  width: 2px;
-}
-
 /* =========================================================
  Layout
 ========================================================= */
+.l-footer__copies {
+  border-top: 2px solid #8c720e;
+  padding: 20px 0;
+}
+
 /* =========================================================
  Object
 ========================================================= */
 /* ---------------------------------------------------------
  Component
 --------------------------------------------------------- */
+.c-container {
+  margin: 0 60px;
+}
+
+.c-btn-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.c-btn-panel::before,
+.c-btn-panel span {
+  position: absolute;
+  transition: 0.3s all ease;
+}
+
+.c-btn-panel::before {
+  content: "";
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #8c720e;
+  z-index: -1;
+}
+
+.c-btn-panel span {
+  color: #8c720e;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (hover: hover) {
+  .c-btn-panel:hover::before {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+  .c-btn-panel:hover span {
+    color: #fff;
+  }
+}
+
 /* ---------------------------------------------------------
  Project
 --------------------------------------------------------- */
+.p-footer-copies {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.p-footer-body {
+  display: flex;
+}
+
+.p-footer-body__links {
+  width: calc(100% / 3);
+  padding-left: 60px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.p-footer-body__contacts {
+  width: calc(100% / 3 * 2);
+  display: flex;
+  flex-direction: column;
+}
+
+.p-footer-body__sns {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.p-footer-body__sns__head, .p-footer-body__sns__body {
+  height: 100%;
+  width: 100%;
+}
+
+.p-footer-body__sns__head {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 20px;
+  font-size: 1.5rem;
+  padding: 40px 20px 40px 0;
+}
+
+.p-footer-body__sns__body {
+  border-left: 2px solid #8c720e;
+  display: flex;
+}
+
+.p-footer-body__sns__link {
+  flex: 1;
+  display: block;
+}
+
+.p-footer-body__sns__link ~ .p-footer-body__sns__link {
+  border-left: 2px solid #8c720e;
+}
+
+.p-footer-body__about {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border-left: 2px solid #8c720e;
+  border-top: 2px solid #8c720e;
+}
+
+.p-footer-body__company {
+  width: 65%;
+  display: flex;
+  padding: 30px 60px;
+}
+
+.p-footer-body__contact {
+  width: 35%;
+  align-self: stretch;
+  border-left: 2px solid #8c720e;
+  font-size: 1.8rem;
+}
+
 /* ---------------------------------------------------------
  Utility
 --------------------------------------------------------- */

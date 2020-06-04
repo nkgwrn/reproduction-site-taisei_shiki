@@ -1,0 +1,75 @@
+.p-footer-body {
+  display: flex;
+
+  &__links {
+    width: calc(100% / 3);
+    padding-left: 60px;
+    font-size: 1.7rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__contacts {
+    width: calc(100% / 3 * 2);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__sns {
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    &__head,
+    &__body {
+      height: 100%;
+      width: 100%;
+    }
+
+    &__head {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 20px;
+      font-size: 1.5rem;
+      padding: 40px 20px 40px 0;
+    }
+
+    &__body {
+      border-left: 2px solid $color-primary;
+      display: flex;
+    }
+
+    &__link {
+      flex: 1;
+      display: block;
+
+      & ~ & {
+        border-left: 2px solid $color-primary;
+      }
+    }
+  }
+
+  &__about {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    border-left: 2px solid $color-primary;
+    border-top: 2px solid $color-primary;
+  }
+
+  &__company {
+    width: 65%;
+    display: flex;
+    padding: 30px 60px;
+  }
+
+  &__contact {
+    width: 35%;
+    align-self: stretch;
+    border-left: 2px solid $color-primary;
+    font-size: 1.8rem;
+  }
+}
