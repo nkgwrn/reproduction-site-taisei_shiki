@@ -28,6 +28,8 @@
     "gulp-postcss": "^8.0.0",
     "gulp-progeny": "^0.4.1",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.0"
+    "gulp-sass": "^4.1.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
   }
 }
