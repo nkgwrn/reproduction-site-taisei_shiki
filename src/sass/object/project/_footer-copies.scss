@@ -3,4 +3,14 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+
+  @include mqMd {
+    font-size: 1rem;
+  }
+
+  &__copy {
+    @include mqMd {
+      display: none;
+    }
+  }
 }

@@ -227,10 +227,6 @@ body {
   }
 }
 
-* {
-  font-weight: normal;
-}
-
 *,
 *:before,
 *:after {
@@ -365,6 +361,12 @@ li {
   padding: 20px 0;
 }
 
+@media only screen and (max-width: 768px) {
+  .l-footer__copies {
+    padding: 15px 0;
+  }
+}
+
 /* =========================================================
  Object
 ========================================================= */
@@ -372,7 +374,14 @@ li {
  Component
 --------------------------------------------------------- */
 .c-container {
-  margin: 0 60px;
+  padding: 0 60px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .c-container {
+    padding: 0 20px;
+  }
 }
 
 .c-btn-panel {
@@ -429,8 +438,27 @@ li {
   align-items: flex-end;
 }
 
+@media only screen and (max-width: 768px) {
+  .p-footer-copies {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .p-footer-copies__copy {
+    display: none;
+  }
+}
+
 .p-footer-body {
   display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-footer-body {
+    display: block;
+    position: relative;
+  }
 }
 
 .p-footer-body__links {
@@ -440,8 +468,28 @@ li {
   font-weight: 700;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 40px 0 40px 60px;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-footer-body__links {
+    width: 100%;
+    padding: 30px 20px;
+  }
+}
+
+.p-footer-body__link ~ .p-footer-body__link {
+  margin-top: 1em;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-footer-body__copy {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    transform: rotate(270deg);
+    transform-origin: right bottom;
+  }
 }
 
 .p-footer-body__contacts {
@@ -450,10 +498,23 @@ li {
   flex-direction: column;
 }
 
+@media only screen and (max-width: 768px) {
+  .p-footer-body__contacts {
+    width: 100%;
+  }
+}
+
 .p-footer-body__sns {
   flex: 1;
   display: flex;
   align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-footer-body__sns {
+    height: 100px;
+    border-top: 2px solid #8c720e;
+  }
 }
 
 .p-footer-body__sns__head, .p-footer-body__sns__body {
@@ -467,6 +528,13 @@ li {
   justify-content: flex-end;
   font-size: 1.5rem;
   padding: 40px 30px 40px 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-footer-body__sns__head {
+    padding: 0 0 0 20px;
+    justify-content: flex-start;
+  }
 }
 
 .p-footer-body__sns__body {
@@ -492,6 +560,13 @@ li {
   border-top: 2px solid #8c720e;
 }
 
+@media only screen and (max-width: 768px) {
+  .p-footer-body__about {
+    display: block;
+    border-left: none;
+  }
+}
+
 .p-footer-body__company {
   width: 65%;
   display: flex;
@@ -500,9 +575,24 @@ li {
   font-size: 1.2rem;
 }
 
+@media only screen and (max-width: 768px) {
+  .p-footer-body__company {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1rem;
+  }
+}
+
 .p-footer-body__company img {
   width: 100px;
   height: 100px;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-footer-body__company img {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .p-footer-body__company > * ~ * {
@@ -516,6 +606,15 @@ li {
   font-size: 1.8rem;
 }
 
+@media only screen and (max-width: 768px) {
+  .p-footer-body__contact {
+    width: 100%;
+    height: 100px;
+    border-left: none;
+    border-top: 2px solid #8c720e;
+  }
+}
+
 /* ---------------------------------------------------------
  Utility
 --------------------------------------------------------- */
@@ -523,23 +622,44 @@ li {
   font-family: "din-next", sans-serif;
 }
 
-.progress {
-  height: 80px;
-  width: 80px;
-  margin: 50px auto;
-}
-
-.progress > svg {
-  height: 100%;
+.u-br-pc {
   display: block;
 }
 
-.swiper-container {
-  width: 100%;
-  height: 100%;
+@media only screen and (max-width: 768px) {
+  .u-br-pc {
+    display: none;
+  }
 }
 
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
+.u-br-sp {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .u-br-sp {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .u-hide-sm {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .u-hide-md {
+    display: none;
+  }
+}
+
+.u-hide-pc {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .u-hide-pc {
+    display: block;
+  }
 }

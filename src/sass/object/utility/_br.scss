@@ -1,16 +1,12 @@
-.u-hide-sm {
+.u-br-pc {
+  display: block;
+
   @include mqMd {
     display: none;
   }
 }
 
-.u-hide-md {
-  @include mqMd {
-    display: none;
-  }
-}
-
-.u-hide-pc {
+.u-br-sp {
   display: none;
 
   @include mqMd {

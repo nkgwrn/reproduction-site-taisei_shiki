@@ -45,22 +45,5 @@
  Utility
 --------------------------------------------------------- */
 @import "object/utility/font";
-
-.progress {
-  height: 80px;
-  width: 80px;
-  margin: 50px auto;
-}
-.progress > svg {
-  height: 100%;
-  display: block;
-}
-
-.swiper-container {
-  width: 100%;
-  height: 100%;
-}
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-}
+@import "object/utility/br";
+@import "object/utility/hide";

@@ -1,3 +1,8 @@
 .c-container {
-  margin: 0 60px;
+  padding: 0 $padding-pc;
+  width: 100%;
+
+  @include mqMd {
+    padding: 0 $padding-sm;
+  }
 }

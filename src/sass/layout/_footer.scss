@@ -2,5 +2,9 @@
   &__copies {
     border-top: 2px solid $color-primary;
     padding: 20px 0;
+
+    @include mqMd {
+      padding: 15px 0;
+    }
   }
 }
