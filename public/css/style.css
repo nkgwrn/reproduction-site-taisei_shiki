@@ -210,7 +210,7 @@ body {
   color: #8c720e;
   font-size: 10px;
   font-size: 1rem;
-  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
   font-weight: 400;
   -webkit-text-size-adjust: 100%;
   letter-spacing: 0.01em;
@@ -352,6 +352,11 @@ li {
   }
 }
 
+@font-face {
+  font-family: "din-next";
+  src: url("../font/din-next-lt_regular.woff") format("woff"), url("../font/din-next-lt_regular.ttf") format("truetype");
+}
+
 /* =========================================================
  Layout
 ========================================================= */
@@ -435,7 +440,8 @@ li {
   font-weight: 700;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 40px 0 40px 60px;
 }
 
 .p-footer-body__contacts {
@@ -459,14 +465,14 @@ li {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding-right: 20px;
   font-size: 1.5rem;
-  padding: 40px 20px 40px 0;
+  padding: 40px 30px 40px 0;
 }
 
 .p-footer-body__sns__body {
   border-left: 2px solid #8c720e;
   display: flex;
+  font-size: 3rem;
 }
 
 .p-footer-body__sns__link {
@@ -490,6 +496,17 @@ li {
   width: 65%;
   display: flex;
   padding: 30px 60px;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.p-footer-body__company img {
+  width: 100px;
+  height: 100px;
+}
+
+.p-footer-body__company > * ~ * {
+  margin-left: 30px;
 }
 
 .p-footer-body__contact {
@@ -502,6 +519,10 @@ li {
 /* ---------------------------------------------------------
  Utility
 --------------------------------------------------------- */
+.u-font-dinnext {
+  font-family: "din-next", sans-serif;
+}
+
 .progress {
   height: 80px;
   width: 80px;

@@ -8,7 +8,8 @@
     font-weight: 700;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 40px 0 40px 60px;
   }
 
   &__contacts {
@@ -32,14 +33,14 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      padding-right: 20px;
       font-size: 1.5rem;
-      padding: 40px 20px 40px 0;
+      padding: 40px 30px 40px 0;
     }
 
     &__body {
       border-left: 2px solid $color-primary;
       display: flex;
+      font-size: 3rem;
     }
 
     &__link {
@@ -64,6 +65,17 @@
     width: 65%;
     display: flex;
     padding: 30px 60px;
+    align-items: center;
+    font-size: 1.2rem;
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+
+    & > * ~ * {
+      margin-left: 30px;
+    }
   }
 
   &__contact {

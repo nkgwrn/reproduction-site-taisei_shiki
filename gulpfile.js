@@ -17,7 +17,12 @@ function buildJS(cb) {
 
 function buildImage(cb) {
   gulp.src(["./src/image/*"]).pipe(gulp.dest("./public/image/"));
-  gulp.src(["./src/image/sp/*"]).pipe(gulp.dest("./public/image/sp"));
+  cb();
+}
+
+function buildFont(cb) {
+  gulp.src("./src/font/*.ttf").pipe(gulp.dest("./public/font"));
+  gulp.src("./src/font/*.woff").pipe(gulp.dest("./public/font"));
   cb();
 }
 
@@ -60,7 +65,12 @@ function watchJS(cb) {
 
 function watchImage(cb) {
   gulp.watch(["./src/image/*"], buildImage).on("change", browserSync.reload);
-  gulp.watch(["./src/image/sp/*"], buildImage).on("change", browserSync.reload);
+  cb();
+}
+
+function watchFont(cb) {
+  gulp.watch(["./src/font/*.ttf"], buildFont).on("change", browserSync.reload);
+  gulp.watch(["./src/font/*.woff"], buildFont).on("change", browserSync.reload);
   cb();
 }
 
@@ -87,5 +97,18 @@ function server(cb) {
   cb();
 }
 
-exports.watch = gulp.parallel(watchSass, watchEjs, watchJS, watchImage, server);
-exports.default = gulp.parallel(buildSass, buildEjs, buildJS, buildImage);
+exports.watch = gulp.parallel(
+  watchSass,
+  watchEjs,
+  watchJS,
+  watchImage,
+  watchFont,
+  server
+);
+exports.default = gulp.parallel(
+  buildSass,
+  buildEjs,
+  buildJS,
+  buildImage,
+  buildFont
+);

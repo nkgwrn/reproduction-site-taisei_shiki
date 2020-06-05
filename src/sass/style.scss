@@ -8,7 +8,7 @@
 @import "foundation/reset";
 @import "foundation/base";
 @import "foundation/animation";
-// @import "foundation/fonts";
+@import "foundation/fonts";
 // @import "foundation/vendor";
 // @import "foundation/vendor-mod";
 /* =========================================================
@@ -44,7 +44,7 @@
 /* ---------------------------------------------------------
  Utility
 --------------------------------------------------------- */
-// @import "object/utility/function";
+@import "object/utility/font";
 
 .progress {
   height: 80px;
