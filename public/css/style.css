@@ -361,6 +361,10 @@ li {
 /* =========================================================
  Layout
 ========================================================= */
+.l-footer {
+  border-top: 2px solid #8c720e;
+}
+
 .l-footer__copies {
   border-top: 2px solid #8c720e;
   padding: 20px 0;
@@ -632,6 +636,18 @@ li {
 }
 
 .p-products {
+  position: relative;
+}
+
+.p-products__head {
+  font-size: 58px;
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  left: 60px;
+}
+
+.p-products__body {
   display: grid;
   grid-auto-rows: 1fr;
 }

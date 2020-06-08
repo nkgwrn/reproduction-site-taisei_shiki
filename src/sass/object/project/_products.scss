@@ -1,7 +1,19 @@
 .p-products {
-  display: grid;
-  // grid-template-columns: repeat(3);
-  grid-auto-rows: 1fr;
+  position: relative;
+
+  &__head {
+    font-size: 58px;
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: $padding-pc;
+  }
+
+  &__body {
+    display: grid;
+    // grid-template-columns: repeat(3);
+    grid-auto-rows: 1fr;
+  }
 
   &__item {
     position: relative;
