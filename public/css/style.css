@@ -362,6 +362,48 @@ li {
 /* =========================================================
  Layout
 ========================================================= */
+.l-header {
+  border-bottom: 2px solid #8c720e;
+  height: 100px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  background-color: #fff8f6;
+}
+
+@media only screen and (max-width: 768px) {
+  .l-header {
+    height: 60px;
+  }
+}
+
+.l-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.l-header__logo {
+  width: 200px;
+}
+
+@media only screen and (max-width: 768px) {
+  .l-header__logo {
+    width: 150px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .l-header__nav {
+    display: none;
+  }
+}
+
 .l-footer {
   border-top: 2px solid #8c720e;
   background-color: #fafafa;
@@ -387,6 +429,7 @@ li {
 .c-container {
   padding: 0 60px;
   width: 100%;
+  height: 100%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -1206,7 +1249,13 @@ li {
 }
 
 .swiper-container {
-  height: 100vh;
+  height: calc(100vh - 100px);
+}
+
+@media only screen and (max-width: 768px) {
+  .swiper-container {
+    height: calc(100vh - 60px);
+  }
 }
 
 .swiper-slide img {
@@ -1237,6 +1286,71 @@ li {
 
 .swiper-pagination-bullet-active {
   background: #8c720e !important;
+}
+
+.p-gnav {
+  display: flex;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.p-gnav__item ~ .p-gnav__item {
+  margin-left: 30px;
+}
+
+.p-nav-sp {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-nav-sp {
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    position: fixed;
+    z-index: 20;
+    background: #fafafa;
+    display: block;
+  }
+}
+
+.p-nav-sp__head {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-nav-sp__title {
+    width: 150px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.p-nav-sp__body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 7vw;
+  font-weight: 700;
+  margin-top: 70px;
+}
+
+.p-nav-sp__logo {
+  width: 30%;
+  padding-right: 20px;
+}
+
+.p-nav-sp__menu li ~ li {
+  margin-top: 10px;
+}
+
+.p-toggle {
+  display: none;
 }
 
 /* ---------------------------------------------------------

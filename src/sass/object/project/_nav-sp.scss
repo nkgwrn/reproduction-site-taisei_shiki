@@ -1,0 +1,50 @@
+.p-nav-sp {
+  display: none;
+
+  @include mqMd {
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    position: fixed;
+    z-index: 20;
+    background: #fafafa;
+    display: block;
+  }
+
+  &__head {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 $padding-sm;
+  }
+
+  &__title {
+    @include mqMd {
+      width: 150px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 7vw;
+    font-weight: 700;
+    margin-top: 70px;
+  }
+
+  &__logo {
+    width: 30%;
+    padding-right: 20px;
+  }
+
+  &__menu {
+    li ~ li {
+      margin-top: 10px;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.p-toggle {
+  display: none;
+
+  @include mqMd {
+    // display: block;
+  }
+}

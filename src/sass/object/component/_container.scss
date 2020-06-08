@@ -1,6 +1,7 @@
 .c-container {
   padding: 0 $padding-pc;
   width: 100%;
+  height: 100%;
 
   @include mqMd {
     padding: 0 $padding-sm;

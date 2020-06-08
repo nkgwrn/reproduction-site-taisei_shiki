@@ -14,7 +14,7 @@
 /* =========================================================
  Layout
 ========================================================= */
-// @import "layout/header";
+@import "layout/header";
 @import "layout/footer";
 // @import "layout/gnav";
 // @import "layout/main";
@@ -40,9 +40,9 @@
 @import "object/project/news";
 @import "object/project/lead";
 @import "object/project/mv";
-// @import "object/project/mission";
-// @import "object/project/value";
-// @import "object/project/competency";
+@import "object/project/gnav";
+@import "object/project/nav-sp";
+@import "object/project/toggle";
 /* ---------------------------------------------------------
  Utility
 --------------------------------------------------------- */

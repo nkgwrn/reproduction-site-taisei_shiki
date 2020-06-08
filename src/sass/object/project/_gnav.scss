@@ -1,0 +1,11 @@
+.p-gnav {
+  display: flex;
+  font-size: 1.7rem;
+  font-weight: 700;
+
+  &__item {
+    & ~ & {
+      margin-left: 30px;
+    }
+  }
+}
