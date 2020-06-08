@@ -6,12 +6,13 @@
     font-size: 58px;
     position: absolute;
     z-index: 4;
-    top: 0;
+    top: -45px;
     left: $padding-pc;
 
     @include mqMd {
       font-size: 3.9rem;
       left: $padding-sm;
+      top: -30px;
     }
   }
 

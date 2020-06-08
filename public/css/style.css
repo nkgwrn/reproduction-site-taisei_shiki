@@ -713,7 +713,7 @@ li {
   font-size: 58px;
   position: absolute;
   z-index: 4;
-  top: 0;
+  top: -45px;
   left: 60px;
 }
 
@@ -721,6 +721,7 @@ li {
   .p-products__head {
     font-size: 3.9rem;
     left: 20px;
+    top: -30px;
   }
 }
 
