@@ -449,6 +449,27 @@ li {
   transition: 0.5s transform ease-out;
 }
 
+.c-btn-line {
+  position: relative;
+}
+
+.c-btn-line::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #8c720e;
+  transition: 0.3s width ease-out;
+}
+
+@media (hover: hover) {
+  .c-btn-line:hover::after {
+    width: 100%;
+  }
+}
+
 .fa-long-arrow-alt-right {
   margin-left: 1rem;
 }
@@ -1018,27 +1039,6 @@ li {
   .p-information__more {
     font-size: 1.3rem;
     margin-top: 20px;
-  }
-}
-
-.p-information__more a {
-  position: relative;
-}
-
-.p-information__more a::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  height: 2px;
-  width: 0;
-  background-color: #8c720e;
-  transition: 0.3s width ease-out;
-}
-
-@media (hover: hover) {
-  .p-information__more a:hover::after {
-    width: 100%;
   }
 }
 

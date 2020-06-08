@@ -32,28 +32,5 @@
       font-size: 1.3rem;
       margin-top: 20px;
     }
-
-    a {
-      position: relative;
-
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        height: 2px;
-        width: 0;
-        background-color: $color-primary;
-        transition: 0.3s width ease-out;
-      }
-
-      @media (hover: hover) {
-        &:hover {
-          &::after {
-            width: 100%;
-          }
-        }
-      }
-    }
   }
 }
