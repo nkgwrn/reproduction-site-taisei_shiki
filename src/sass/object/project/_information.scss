@@ -1,0 +1,59 @@
+.p-information {
+  padding: 70px 0 60px;
+
+  @include mqMd {
+    padding: 50px 0 25px;
+  }
+
+  &__head {
+    font-size: 2.8rem;
+
+    @include mqMd {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__body {
+    margin-top: 40px;
+
+    @include mqMd {
+      margin-top: 30px;
+    }
+  }
+
+  &__more {
+    font-size: 1.6rem;
+    font-weight: 700;
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+
+    @include mqMd {
+      font-size: 1.3rem;
+      margin-top: 20px;
+    }
+
+    a {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        height: 2px;
+        width: 0;
+        background-color: $color-primary;
+        transition: 0.3s width ease-out;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
