@@ -1596,11 +1596,11 @@ li {
     stroke-dashoffset: 2000;
     fill: transparent;
   }
-  70% {
+  10% {
     stroke-dashoffset: 2000;
     fill: transparent;
   }
-  80% {
+  30% {
     fill: transparent;
   }
   100% {
@@ -1614,11 +1614,11 @@ li {
     stroke-dashoffset: 2000;
     fill: transparent;
   }
-  70% {
+  10% {
     stroke-dashoffset: 2000;
     fill: transparent;
   }
-  80% {
+  30% {
     fill: transparent;
   }
   100% {
