@@ -1,6 +1,4 @@
 function globalNav() {
-  console.log("test.");
-
   const toggle = document.getElementById("js-toggle");
   const globalNav = document.getElementById("js-globalNav");
 

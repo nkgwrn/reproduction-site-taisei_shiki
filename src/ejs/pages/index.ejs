@@ -2,13 +2,15 @@
 <html lang="ja">
   <%- include('../components/_head'); %>
   <body id="wrapper">
-    <%- include('../components/_header'); %> <%-
-    include('../components/_nav-sp'); %>
+    <%- include('../components/_opening'); %> <%-
+    include('../components/_header'); %> <%- include('../components/_nav-sp');
+    %>
     <div id="js-toggle" class="p-toggle"></div>
-
     <main class="l-main">
+      <%- include('../components/_floating'); %>
       <div>
-        <%- include('../components/_mv'); %>
+        <%- include('../components/_mv'); %> <%-
+        include('../components/_scroll'); %>
       </div>
       <section>
         <%- include('../components/_lead'); %>

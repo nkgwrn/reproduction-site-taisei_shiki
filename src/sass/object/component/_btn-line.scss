@@ -9,7 +9,7 @@
     height: 2px;
     width: 0;
     background-color: $color-primary;
-    transition: 0.3s width ease-out;
+    transition: 0.3s width $ease-cubic;
   }
 
   @media (hover: hover) {

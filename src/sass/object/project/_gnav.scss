@@ -5,7 +5,15 @@
 
   &__item {
     & ~ & {
-      margin-left: 30px;
+      margin-left: 35px;
+    }
+
+    &--sns {
+      margin-left: 50px !important;
+
+      & ~ & {
+        margin-left: 30px !important;
+      }
     }
   }
 }

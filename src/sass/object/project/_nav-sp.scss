@@ -1,5 +1,6 @@
 .p-nav-sp {
   display: none;
+  pointer-events: none;
 
   @include mqMd {
     display: block;
@@ -9,7 +10,7 @@
     height: 100vh;
     top: 0;
     position: fixed;
-    z-index: 20;
+    z-index: 30;
     font-weight: 700;
     border: 2px solid $color-primary;
     background-color: $color-bg-beige;
@@ -20,6 +21,7 @@
     &.is-open {
       opacity: 1;
       transform: translateY(0);
+      pointer-events: auto;
     }
   }
 
@@ -63,12 +65,22 @@
     align-items: center;
     justify-content: center;
     font-size: 7vw;
-    margin-top: 70px;
+    margin-top: 24vw;
+  }
+
+  &__copy {
+    position: absolute;
+    transform-origin: left bottom;
+    transform: rotate(270deg);
+    font-weight: 400;
+    right: -60px;
+    bottom: 20px;
+    letter-spacing: 0.05em;
   }
 
   &__logo {
-    width: 30%;
-    padding-right: 20px;
+    width: 80px;
+    margin-right: 7vw;
   }
 
   &__menu {

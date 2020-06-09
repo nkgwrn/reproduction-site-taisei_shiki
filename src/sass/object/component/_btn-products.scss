@@ -6,5 +6,5 @@
   margin-top: 30px;
   transform: rotate(5deg);
   transform-origin: left bottom;
-  transition: 0.5s transform ease-out;
+  transition: 0.5s transform $ease-cubic;
 }
