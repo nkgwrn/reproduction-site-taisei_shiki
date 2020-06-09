@@ -1305,19 +1305,29 @@ li {
 
 @media only screen and (max-width: 768px) {
   .p-nav-sp {
+    display: block;
+    opacity: 0;
     left: 0;
     width: 100%;
     height: 100vh;
     top: 0;
     position: fixed;
     z-index: 20;
-    background: #fafafa;
-    display: block;
+    font-weight: 700;
+    border: 2px solid #8c720e;
+    background-color: #fff8f6;
+    overflow-y: auto;
+    transform: translateY(-10%);
+    transition: all 0.3s ease-out;
+  }
+  .p-nav-sp.is-open {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 .p-nav-sp__head {
-  height: 50px;
+  height: 58px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1337,7 +1347,6 @@ li {
   align-items: center;
   justify-content: center;
   font-size: 7vw;
-  font-weight: 700;
   margin-top: 70px;
 }
 
@@ -1347,11 +1356,106 @@ li {
 }
 
 .p-nav-sp__menu li ~ li {
-  margin-top: 10px;
+  margin-top: 15px;
+}
+
+.p-nav-sp__sns {
+  display: flex;
+  height: 200px;
+  border-top: 2px solid #8c720e;
+  margin-top: 30vw;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-nav-sp__sns {
+    height: 100px;
+  }
+}
+
+.p-nav-sp__sns__head {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  padding-left: 20px;
+}
+
+.p-nav-sp__sns__body {
+  display: flex;
+  font-size: 2rem;
+  width: 70%;
+  max-width: 558px;
+  flex: 1;
+}
+
+.p-nav-sp__sns__link {
+  width: calc(100% / 3);
+}
+
+.p-nav-sp__sns__link ~ .p-nav-sp__sns__link {
+  border-left: 2px solid #8c720e;
+}
+
+.p-nav-sp__contact, .p-nav-sp__amazon {
+  height: 100px;
+  border-top: 2px solid #8c720e;
+}
+
+.p-nav-sp__contact a, .p-nav-sp__amazon a {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: 20px 0;
+  font-size: 1.8rem;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.p-nav-sp__contact a::after, .p-nav-sp__amazon a::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f30b";
+  position: absolute;
+  right: 0;
+  bottom: 1em;
+}
+
+.p-nav-sp__amazon {
+  background-color: #8c720e;
+  position: relative;
+}
+
+.p-nav-sp__amazon::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -10px;
+  height: 100%;
+  width: 250px;
+  background: url(../image/img-logo-amazon.png) no-repeat;
+  background-size: contain;
+}
+
+.p-nav-sp__amazon a {
+  color: #fff8f6;
 }
 
 .p-toggle {
   display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-toggle {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    z-index: 21;
+    background: url(../image/img_nav_open.png) no-repeat;
+  }
+  .p-toggle.is-active {
+    background: url(../image/img_nav_close.png) no-repeat;
+  }
 }
 
 /* ---------------------------------------------------------
