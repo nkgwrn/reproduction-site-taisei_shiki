@@ -1686,14 +1686,21 @@ li {
 }
 
 .p-scroll {
-  position: absolute;
-  bottom: 5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 11;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-scroll {
+    display: flex;
+    position: absolute;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .p-scroll__txt {
