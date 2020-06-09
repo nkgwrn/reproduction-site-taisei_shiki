@@ -23,6 +23,25 @@
     }
   }
 
+  &__main {
+    padding-bottom: 30vw;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      top: -50px;
+      right: -250px;
+      background: url(../image/logo-gnav-bg-sp.png) no-repeat;
+      background-size: cover;
+      z-index: -1;
+      animation: 200s linear infinite rotation;
+    }
+  }
+
   &__head {
     height: 58px;
     display: flex;
@@ -62,7 +81,6 @@
     display: flex;
     height: 200px;
     border-top: 2px solid $color-primary;
-    margin-top: 30vw;
 
     @include mqSm {
       height: 100px;

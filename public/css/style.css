@@ -349,6 +349,24 @@ li {
   }
 }
 
+@-webkit-keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @font-face {
   font-family: "din-next";
   src: url("../font/din-next-lt_regular.woff") format("woff"), url("../font/din-next-lt_regular.ttf") format("truetype");
@@ -1326,6 +1344,26 @@ li {
   }
 }
 
+.p-nav-sp__main {
+  padding-bottom: 30vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.p-nav-sp__main::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: -50px;
+  right: -250px;
+  background: url(../image/logo-gnav-bg-sp.png) no-repeat;
+  background-size: cover;
+  z-index: -1;
+  -webkit-animation: 200s linear infinite rotation;
+          animation: 200s linear infinite rotation;
+}
+
 .p-nav-sp__head {
   height: 58px;
   display: flex;
@@ -1363,7 +1401,6 @@ li {
   display: flex;
   height: 200px;
   border-top: 2px solid #8c720e;
-  margin-top: 30vw;
 }
 
 @media only screen and (max-width: 480px) {
