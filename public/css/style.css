@@ -782,7 +782,8 @@ li {
 
 @media all and (-ms-high-contrast: none) {
   .p-products__body {
-    -ms-grid-rows: minmax(250px, 1fr) [8];
+    -ms-grid-columns: (minmax(250px, 1fr))[8];
+    grid-template-columns: repeat(8, minmax(250px, 1fr));
   }
 }
 
