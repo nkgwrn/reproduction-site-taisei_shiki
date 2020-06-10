@@ -23,6 +23,12 @@
   }
 }
 
+@mixin mqIe {
+  @media all and (-ms-high-contrast: none) {
+    @content;
+  }
+}
+
 // フォントサイズ(vw指定)
 // --------------------
 @function get_vw($size, $viewport: 375) {

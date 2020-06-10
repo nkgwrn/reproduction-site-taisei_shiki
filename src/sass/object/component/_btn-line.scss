@@ -19,4 +19,12 @@
       }
     }
   }
+
+  @include mqIe {
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
 }

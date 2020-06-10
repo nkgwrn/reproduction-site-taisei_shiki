@@ -43,4 +43,18 @@
       }
     }
   }
+
+  @include mqIe {
+    &:hover {
+      &::before {
+        left: 0;
+        right: auto;
+        width: 100%;
+      }
+
+      span {
+        color: #fff;
+      }
+    }
+  }
 }

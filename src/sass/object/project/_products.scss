@@ -21,7 +21,7 @@
     grid-template-columns: repeat(3, minmax(250px, 1fr));
     grid-auto-rows: 1fr;
 
-    @media all and (-ms-high-contrast: none) {
+    @include mqIe {
       grid-template-rows: repeat(8, minmax(250px, 1fr));
     }
 
@@ -44,6 +44,26 @@
     }
 
     @media (hover: hover) {
+      &:hover {
+        .p-products__cover {
+          opacity: 1;
+
+          + img {
+            transform: scale(1.1);
+          }
+        }
+
+        .p-products__text {
+          transform: translateY(0);
+        }
+
+        .c-btn-products {
+          transform: rotate(0);
+        }
+      }
+    }
+
+    @include mqIe {
       &:hover {
         .p-products__cover {
           opacity: 1;
