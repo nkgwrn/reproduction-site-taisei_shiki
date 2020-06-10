@@ -1247,6 +1247,7 @@ li {
 .p-products__text {
   transform: translateY(10px);
   transition: 0.3s transform ease-out;
+  width: 100%;
 }
 
 .p-products__cover {
