@@ -1,5 +1,4 @@
 function floatingBanner() {
-  console.log("float!");
   const float = document.getElementById("js-floating");
   var timeoutId;
 
