@@ -777,6 +777,8 @@ li {
   display: grid;
   -ms-grid-columns: (minmax(250px, 1fr))[3];
   grid-template-columns: repeat(3, minmax(250px, 1fr));
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
   grid-auto-rows: 1fr;
 }
 
